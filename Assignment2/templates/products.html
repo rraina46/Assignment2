@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Products{% endblock %}
+
+{% block content %}
+<h2 class="text-center my-4">Our Products</h2>
+<div class="container">
+    <div class="row">
+        {% for product in products %}
+        <div class="col-md-4 mb-4">
+            <div class="product_item border rounded shadow-sm text-center">
+                <img src="{{ url_for('static', filename=product.image_path) }}" alt="{{ product.name }}" class="img-fluid product-image rounded-top">
+                <h3 class="my-3">{{ product.name }}</h3>
+                <p class="text-muted">{{ product.tag }}</p>
+                <p class="font-weight-bold">${{ product.price }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,66 @@
+body {
+    background-color: #f8f9fa; /* Light gray background for overall page */
+    color: #333; /* Dark text color for readability */
+    font-family: 'Arial', sans-serif; /* Set a clean font */
+}
+
+.container {
+    padding: 20px; /* Adds padding around the container */
+}
+
+h2 {
+    color: #007bff; /* Bootstrap primary color */
+    margin-bottom: 20px; /* Space below headings */
+}
+
+.product_item {
+    background-color: #ffffff; /* White background for product items */
+    border: 1px solid #dee2e6; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.product_item:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Optional: Add a background image with overlay effect */
+.home-background {
+    background-image: url('../static/images/home-background.jpg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    height: 100vh; /* Full viewport height */
+    position: relative; /* Position relative for content layering */
+    color: white; /* White text on dark background */
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    text-align: center; /* Center text */
+}
+
+.home-background::after {
+    content: ''; /* Empty content for overlay */
+    position: absolute; /* Absolute position */
+    top: 0; /* Cover the entire area */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with opacity */
+    z-index: 1; /* Layer above the image */
+}
+
+.home-title {
+    position: relative; /* Position relative for layering */
+    z-index: 2; /* Bring title above the overlay */
+    font-size: 3rem; /* Adjust font size */
+    font-weight: bold; /* Make title bold */
+}
+
+.product_item img {
+    width: 200px; /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensures images cover the entire box while maintaining aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for images */
+}
