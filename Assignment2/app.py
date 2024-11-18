@@ -10,7 +10,7 @@ MONGODB_PASSWORD = os.getenv("MONGODB_PASSWORD")
 app = Flask(__name__)
 
 # MongoDB connection setup
-client = MongoClient("mongodb+srv://admin:F8Et728EaYMYKyZD@devops.9yjoy.mongodb.net/?retryWrites=true&w=majority&appName=DevOps")
+client = f"mongodb+srv://{MONGODB_USERNAME}:{MONGODB_{PASSWORD}@devops.9yjoy.mongodb.net/?retryWrites=true&w=majority&appName=DevOps"
 db = client.shop_db
 products_collection = db['products']
 
