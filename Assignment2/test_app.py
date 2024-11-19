@@ -1,6 +1,6 @@
 import unittest
 
-from app import app, client  # Ensure accurate import paths
+from app import app, client
 from unittest.mock import patch, MagicMock
 from pymongo.errors import ConnectionFailure
 
